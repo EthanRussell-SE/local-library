@@ -20,13 +20,18 @@ function partitionBooksByBorrowedStatus(books) {
     }
   });
 
+let finalArray2 = combineArrays(result,resultTrue);
+  //result.push(books.filter((book) => book.borrows.returned === true));
+  return finalArray2;
+}
+function combineArrays (result,resultTrue){
+
   let finalArray = [];
   finalArray.push(result);
   finalArray.push(resultTrue);
-  //result.push(books.filter((book) => book.borrows.returned === true));
+
   return finalArray;
 }
-
 function getBorrowersForBook(book, accounts) {
   //go through the books borrow history
   //for each borrower, look up acc info
