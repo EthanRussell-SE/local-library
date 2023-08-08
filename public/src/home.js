@@ -15,14 +15,17 @@ function getTotalBooksCount(books) {
 
 function getTotalAccountsCount(accounts) {
   let result = 0;
-
-  if (accounts) {
-    for (let i = 0; i < accounts.length; i++) {
+  let arrayMap = accounts.map((x)=> x = x);
+  if (arrayMap) {
+    for (let i = 0; i < arrayMap.length; i++) {
       result++;
     }
   }
   return result;
 }
+
+
+
 
 function getBooksBorrowedCount(books) {
   let result = 0;
@@ -108,4 +111,3 @@ module.exports = {
   getMostPopularBooks,
   getMostPopularAuthors,
 };
-
