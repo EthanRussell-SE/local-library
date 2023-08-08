@@ -5,7 +5,12 @@ function getTotalBooksCount(books) {
     result++;
   }
 
-  return result;
+  if(result === 0){
+    return 0;
+  }
+  const totalNum = books.reduce((sum, a, index) => index+1);
+  
+  return totalNum;
 }
 
 function getTotalAccountsCount(accounts) {
@@ -103,3 +108,4 @@ module.exports = {
   getMostPopularBooks,
   getMostPopularAuthors,
 };
+
